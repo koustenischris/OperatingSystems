@@ -48,7 +48,7 @@ void fork_procs(struct tree_node *root)
 	/* ... */
 	printf("PID = %ld, name = %s is awake\n",(long)getpid(), root->name);
 
-    int status;
+        int status;
 	for (int i = 0; i < root->nr_children; ++i)
 	{
 		kill(pid[i], SIGCONT); //let's send a wake up signal to each of our children
