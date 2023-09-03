@@ -19,7 +19,7 @@ void fork_procs(struct tree_node *root)
 	if(root->nr_children == 0)
 	{
 		printf("%s: Stoping...\n", root->name);
-	    raise(SIGSTOP);
+	        raise(SIGSTOP);
 		printf("PID = %ld, name = %s is awake\n",(long)getpid(), root->name);		
 		exit(20);
 	}
